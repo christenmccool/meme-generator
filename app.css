@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Kiwi Maru";
+    background-color: #eeeee4;
+}
+
+h1, p {
+    text-align: center;
+}
+
+section {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form {
+    text-align: right;
+} 
+
+div.entry {
+    margin: 10px 0 10px 0;
+} 
+
+input[type="text"] {
+    width: 75%;
+    margin-left: 40px;
+    padding: 5px;
+}
+
+section button {
+    padding: 5px; 
+    background-color: #154c79;
+    border-radius: 10px;
+    width: 150px;
+    color: white;
+    font-family: "Kiwi Maru";
+}
+
+
+div.meme {
+    display: inline-block;
+    position: relative;
+    width: 500px;
+    margin: 20px;
+    text-align: right;
+}
+
+img {
+    width: 500px;
+}
+
+
+div.text-div {
+    color: white;
+    font-family: "Arial";
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: -2px -2px 0 black,  2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+
+div.text-top-div {
+    position: absolute;
+    font-size: 40px;
+    top: 10px;
+    left: 0;
+    right: 0;
+}
+
+div.text-bottom-div {
+    position: absolute;
+    font-size: 40px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+}
+
+button.delete-button {
+    padding: 2px;
+    color: black;
+    background-color: #C0C0C0;
+    font-family: "Kiwi Maru";
+}
