@@ -75,14 +75,27 @@ div.text-top-div {
 div.text-bottom-div {
     position: absolute;
     font-size: 40px;
-    bottom: 40px;
+    bottom: 10px;
     left: 0;
     right: 0;
 }
 
-button.delete-button {
-    padding: 2px;
-    color: black;
-    background-color: #C0C0C0;
-    font-family: "Kiwi Maru";
+
+div.delete-div {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+}
+
+
+div.grey-div {
+    background-color: rgba(255,255,255, 0.4);
+}
+
+.delete-div button {
+    position: absolute;
+    top: 3px;
+    right: 3px;
 }

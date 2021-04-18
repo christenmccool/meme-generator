@@ -12,6 +12,35 @@ entryForm.addEventListener('submit', function(evt) {
     
     const newMemeImg = document.createElement('img');
     newMemeImg.setAttribute('src', `${imageURL.value}`);
+    newMemeImg.addEventListener('load', () => {
+        let imgHeight = newMemeImg.height;
+        const deleteDiv = document.createElement('div');
+        deleteDiv.classList.add('delete-div');
+        deleteDiv.style.height = `${imgHeight}px`;
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerText = "X";
+        deleteBtn.style.display = "none";
+        deleteDiv.append(deleteBtn);
+
+        newMeme.append(deleteDiv);
+
+        deleteDiv.addEventListener('mouseover', function () {
+            deleteDiv.classList.add('grey-div');
+            deleteBtn.style.display = "block";
+        })
+
+        deleteDiv.addEventListener('mouseout', function () {
+            deleteDiv.classList.remove('grey-div');
+            deleteBtn.style.display = "none";
+        })
+        
+        deleteBtn.addEventListener('click', function (e) {
+            e.target.parentElement.parentElement.remove();
+        })
+
+    })
+
     newMeme.append(newMemeImg);
     imageURL.value = '';
 
@@ -29,13 +58,6 @@ entryForm.addEventListener('submit', function(evt) {
     newMeme.append(newBottomText);
     textBottom.value = '';
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('delete-button');
-    deleteBtn.innerText = "Delete";
-    newMeme.append(deleteBtn);
-    
-    deleteBtn.addEventListener('click', function (e) {
-        e.target.parentElement.remove();
-    })
+    const deleteDiv = document.createElement('div');
 })
 
